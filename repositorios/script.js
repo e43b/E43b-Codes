@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             displayRepositories(repositories);
         })
         .catch(error => {
-            console.error('Erro ao carregar dados dos repositórios:', error);
+            console.error('Error loading repository data:', error);
         });
 
     toggleGenresButton.addEventListener('click', () => {
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             let endDateHTML = '';
             if (repo.enddAt) {
-                endDateHTML = `<p><strong>Data de Finalização:</strong> ${repo.enddAt}</p>`;
+                endDateHTML = `<p><strong>End Date:</strong> ${repo.enddAt}</p>`;
             }
 
             li.innerHTML = `
@@ -81,10 +81,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         <h3><a href="${repo.githubUrl}" target="_blank">${repo.title}</a></h3>
                         <p>${repo.description}</p>
                         <p><strong>Status:</strong> <span class="${repo.encerrado ? 'status-encerrado' : 'status-andamento'}">${repo.encerrado ? 'Encerrado' : 'Em andamento'}</span></p>
-                        <p><strong>Data de Criação:</strong> ${repo.createdAt}</p>
+                        <p><strong>Creation Date:</strong> ${repo.createdAt}</p>
                         ${endDateHTML}
-                        <p><strong>Gêneros:</strong> ${genresHTML}</p>
-                        <a href="${repo.siteUrl}" target="_blank">Visualize o projeto</a>
+                        <p><strong>Topics:</strong> ${genresHTML}</p>
+                        <a href="${repo.siteUrl}" target="_blank">View the project</a>
                     </div>
                 </div>
             `;
