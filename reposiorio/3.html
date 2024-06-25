@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E43b Codes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a i {
+            margin-right: 5px;
+        }
+
+        .language-selector {
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 0;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            align-items: center;
+        }
+
+        #content {
+            width: 100%;
+            max-width: 90%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-y: auto;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            nav ul li a span {
+                display: none;
+            }
+
+            nav ul li a i {
+                margin-right: 0;
+            }
+        }
+        h1 a {
+            text-decoration: none; /* Remove a decoração do link */
+            color: white;          /* Define a cor do texto como branca */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="index.html">E43b Codes</a></h1>
+            <ul>
+                <li><a href="https://github.com/e43b" target="_blank"><i class="fab fa-github"></i> <span>GitHub</span></a></li>
+                <li><a href="https://discord.gg/bEyHhmbRVw" target="_blank"><i class="fab fa-discord"></i> <span>Discord</span></a></li>
+                <li><a href="https://oxapay.com/donate/40874860" target="_blank"><i class="fas fa-donate"></i> <span>Doações</span></a></li>
+                <li><a href="/repositorios/index.html"><i class="fab fa-github-alt"></i> <span>Repositórios</span></a></li>
+                <li><a href="/blog/index.html"><i class="fas fa-pen-nib"></i> <span>Blog</span></a></li>
+                <li class="dropdown">
+                    <a href="#" class="language-selector"><i class="fas fa-globe"></i> <span>Language</span></a>
+                    <div class="dropdown-content">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="pt">Português</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="content" class="markdown-body">
+            <!-- O conteúdo em markdown será renderizado aqui -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Criado por <a href="https://github.com/e43b" target="_blank">E43b</a></p>
+    </footer>
+
+    <script>
+        const content = {
+            en: `
+# Kemono-Downloader
+
+# 🚨 Project Discontinued 🚨
+
+This project has been **discontinued**. But don't worry, a new version is available! 🎉
+
+Check out the new version of the **Kemono and Coomer Downloader** in the new repository:
+👉 [https://github.com/e43b/Kemono-and-Coomer-Downloader/](https://github.com/e43b/Kemono-and-Coomer-Downloader/)
+
+New features, improvements, and continuous support await you! 🔥
+
+We thank everyone who used and contributed to this project. 🙏 Your support was crucial for us to reach this point. Join us in the new version and be part of this evolution! 🚀
+
+If you have questions or need support, join our Discord:
+👉 [Discord](https://discord.gg/TaPhfXawcE)
+
+See you there! 💬✨
+
+## Scraping Images from [Kemono](https://kemono.su/) Posts
+
+This Python script allows you to download images from Kemono posts, using the BeautifulSoup library to parse the HTML content of the page.
+
+### Prerequisites
+
+Make sure you have Python installed on your system. If not, you can download it [here](https://www.python.org/downloads/).
+
+### Dependency Installation
+
+This script requires the following Python libraries:
+
+- \`requests\`
+- \`BeautifulSoup\`
+
+You can install these dependencies using the \`pip\` package manager. Execute the following command in the terminal:
+
+\`\`\`
+pip install requests beautifulsoup4
+\`\`\`
+
+### How to Use
+
+1. Clone this repository or download the \`main.py\` script.
+2. Navigate to the directory where the script is located.
+3. Run the script using Python:
+
+\`\`\`
+python main.py
+\`\`\`
+
+4. When running the script, you will be prompted to enter an option to choose the language in which you want to execute the code.
+5. After entering the desired language, the options will be displayed. Simply select the one that best suits your needs.
+
+### Explaining the Options
+
+In Kemono, it's common to find two types of posts: posts composed of images and text posts. This script offers the possibility to download both types of posts.
+
+- To download a post composed of images, choose option number 1.
+- To download a text post, choose option number 2.
+- To download the text content and images from a post, choose option 3.
+
+It's also possible to download all posts from a profile:
+
+- If you want to download all image posts from a profile, select option number 4.
+- If you prefer to download all text posts from a profile, choose option number 5.
+
+Additionally, it's possible to download all direct messages (DMs) from a profile by selecting option number 6.
+
+### Note
+
+- This script can be used only for educational or research purposes.
+- Make sure not to violate Kemono's terms of service or any copyrights while using this script.
+
+### Author
+
+This script was written by [e43b]. If you have any questions or suggestions, feel free to contact me at [https://discord.gg/c6NTpgAzPf].
+
+### License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+            `,
+            pt: `
+# Kemono-Downloader
+
+# 🚨 Projeto Encerrado 🚨
+
+Este projeto foi **encerrado**. Mas não se preocupe, uma nova versão está disponível! 🎉
+
+Confira a nova versão do **Kemono and Coomer Downloader** no novo repositório:
+👉 [https://github.com/e43b/Kemono-and-Coomer-Downloader/](https://github.com/e43b/Kemono-and-Coomer-Downloader/)
+
+Novas funcionalidades, melhorias e suporte contínuo esperam por você! 🔥
+
+Agradecemos a todos que utilizaram e contribuíram para este projeto. 🙏 Seu apoio foi fundamental para chegarmos até aqui. Continue conosco na nova versão e faça parte dessa evolução! 🚀
+
+Se você tiver dúvidas ou precisar de suporte, junte-se ao nosso Discord:
+👉 [Discord](https://discord.gg/TaPhfXawcE)
+
+Nos vemos lá! 💬✨
+
+## Scraping de Imagens de Posts do [Kemono](https://kemono.su/)
+
+Este script Python permite baixar imagens de posts do Kemono, utilizando a biblioteca BeautifulSoup para fazer o parsing do conteúdo HTML da página.
+
+### Pré-requisitos
+
+Certifique-se de ter Python instalado em seu sistema. Caso não tenha, você pode baixá-lo [aqui](https://www.python.org/downloads/).
+
+### Instalação de Dependências
+
+Este script requer as seguintes bibliotecas Python:
+
+- \`requests\`
+- \`BeautifulSoup\`
+
+Você pode instalar essas dependências utilizando o gerenciador de pacotes \`pip\`. Execute o seguinte comando no terminal:
+
+\`\`\`
+pip install requests beautifulsoup4
+\`\`\`
+
+### Como Usar
+
+1. Clone este repositório ou baixe o script \`main.py\`.
+2. Navegue até o diretório onde o script está localizado.
+3. Execute o script utilizando o Python:
+
+\`\`\`
+python main.py
+\`\`\`
+
+4. Ao executar o script, você será solicitado a inserir uma opção para escolher o idioma em que deseja executar o código.
+5. Após inserir o idioma desejado, as opções serão exibidas. Basta selecionar aquela que melhor atende às suas necessidades.
+
+### Explicando as Opções
+
+No Kemono, é comum encontrar dois tipos de posts: os posts compostos por imagens e os posts de texto. Este script oferece a possibilidade de baixar ambos os tipos de posts.
+
+- Para baixar um post composto por imagens, escolha a opção número 1.
+- Para baixar um post de texto, escolha a opção número 2.
+- Para baixar o conteúdo em texto e as imagens de um post, escolha a opção 3.
+
+Também é viável baixar todos os posts de um perfil:
+
+- Se desejar baixar todos os posts de imagens de um perfil, selecione a opção número 4.
+- Se preferir baixar todos os posts de texto de um perfil, escolha a opção número 5.
+
+Além disso, é possível baixar todas as mensagens diretas (DMs) de um perfil, optando pela opção número 6.
+
+### Nota
+
+- Este script pode ser usado apenas para fins educacionais ou de pesquisa.
+- Certifique-se de não violar os termos de serviço do Kemono ou quaisquer direitos autorais ao utilizar este script.
+
+### Autor
+
+Este script foi escrito por [e43b]. Se tiver dúvidas ou sugestões, entre em contato comigo em [https://discord.gg/c6NTpgAzPf].
+
+### Licença
+
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter mais detalhes.
+            `
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            function renderContent(language) {
+                document.getElementById('content').innerHTML = marked.parse(content[language]);
+            }
+
+            renderContent('en'); // Default language is English
+
+            document.querySelectorAll('.dropdown-content a').forEach(item => {
+                item.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const selectedLang = this.getAttribute('data-lang');
+                    renderContent(selectedLang);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

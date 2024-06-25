@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E43b Codes</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a i {
+            margin-right: 5px;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #content {
+            text-align: left;
+            display: inline-block;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            nav ul li a span {
+                display: none;
+            }
+
+            nav ul li a i {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>E43b Codes</h1>
+            <ul>
+                <li><a href="https://github.com/e43b" target="_blank"><i class="fab fa-github"></i> <span>GitHub</span></a></li>
+                <li><a href="https://discord.gg/bEyHhmbRVw" target="_blank"><i class="fab fa-discord"></i> <span>Discord</span></a></li>
+                <li><a href="https://oxapay.com/donate/40874860" target="_blank"><i class="fas fa-donate"></i> <span>Doações</span></a></li>
+                <li><a href="#repositorios" target="_blank"><i class="fab fa-github-alt"></i> <span>Repositórios</span></a></li>
+                <li><a href="#blog" target="_blank"><i class="fas fa-pen-nib"></i> <span>Blog</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="content">
+            <!-- O conteúdo em markdown será renderizado aqui -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Criado por <a href="https://github.com/e43b" target="_blank">E43b</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const markdownContent = `
+            
+# Kemono and Coomer Downloader [![Views](https://hits.sh/github.com/e43bkmncoomen/hits.svg)](https://github.com/e43b/Anibunker-Downloader/)
+
+###### [![](img/en-flag.svg) English](README.md) | [![](img/br.png) Português](README-ptbr.md)
+
+The **Kemono and Coomer Downloader** is a tool that allows you to download posts from the [Kemono](https://kemono.su/) and [Coomer](https://coomer.su/) websites.
+
+With this tool, you can download single posts, multiple posts sequentially, download all posts from a profile, and download all DMs from a Kemono profile. You can also configure what you want to save in the posts: attachments, videos, create a ".txt" file with information about the post, among others. For more information, visit the [documentation](https://github.com/e43b/Kemono-and-Coomer-Downloader/blob/main/codeen/doc.md).
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=e43b/Kemono-and-Coomer-Downloader&type=Date)](https://star-history.com/#e43b/Kemono-and-Coomer-Downloader&Date)
+
+## How to Use
+
+1. **Make sure you have Python installed on your system.**
+2. **Clone this repository:**
+
+    
+    git clone https://github.com/e43b/Kemono-and-Coomer-Downloader/
+    
+
+3. **Navigate to the project directory:**
+
+    
+    cd Kemono-and-Coomer-Downloader
+    
+
+4. **Select the desired language:**
+
+    - The "codeen" folder contains the English version.
+    - The "codept" folder contains the Portuguese version.
+
+5. **Run the main script:**
+
+    
+    python main.py
+    
+
+6. **Follow the instructions in the menu to choose what you want to download or customize the program.**
+
+## Libraries
+
+The required libraries are: "requests" and "beautifulsoup4". When running the script for the first time, if the libraries are not installed, you will be prompted to install them. Just type "y" and they will be installed automatically.
+
+![Requirements](img/bibliotecas.png)
+
+## Features
+
+### Home Page
+
+The project homepage presents the main options available to facilitate the use of the tool.
+
+![Página Inicial](img/home.png)
+
+### Download Post
+
+To download specific posts, just enter the post link. If you want to download multiple posts, separate the links with a comma. Example:
+
+
+https://kemono.su/patreon/user/133054/post/82477856 , https://coomer.su/fansly/user/285310079517863936/post/614339200069672960 , https://coomer.su/fansly/user/285310079517863936/post/611301068940255234
+
+
+![Posts](img/posts.png)
+
+### Download All Posts from a Profile
+
+Enter the link of a Kemono or Coomer profile, and the script will start downloading all posts that match the program configuration for downloading all posts from a profile.
+
+![Profile](img/perfil.png)
+
+### Download DMs
+
+This only works for profiles on the Kemono website, as Coomer does not have this feature. Just put the profile link, and all DMs will be extracted in "".txt" format and saved in the "dm" folder.
+
+![DM](img/dm.png)
+![DM arquivos](img/dmarchives.png)
+
+## File Organization
+
+Posts are saved in folders for easier organization. The folder structure is as follows:
+
+1. **Platform:** A main folder is created for the platform (Kemono or Coomer).
+2. **Author:** Inside the platform folder, a folder is created for each author.
+3. **Posts:** Inside the author's folder, there is a "posts" folder where posts are saved. Each post is saved in a subfolder identified by the post ID.
+4. **DMs:** Inside the author's folder, there is also a "DMs" folder where the ".txt" DM files are saved.
+
+Example of the folder structure:
+
+
+Kemono-and-Coomer-Downloader/
+│
+├── kemono/                               # Kemono platform folder
+│   ├── author1/                          # Author 1 folder
+│   │   ├── posts/                        # Posts folder for author 1
+│   │   │   ├── postID1/                  # Post folder with ID 1
+│   │   │   │   ├── post_content          # Post content
+│   │   │   │   └── ...                   # Other post files
+│   │   │   └── postID2/                  # Post folder with ID 2
+│   │   │       ├── post_content          # Post content
+│   │   │       └── ...                   # Other post files
+│   │   └── DMs/                          # DMs folder for author 1
+│   │       ├── dm1.txt                   # DM 1
+│   │       ├── dm2.txt                   # DM 2
+│   │       └── ...                       # Other DMs
+│   └── author2/                          # Author 2 folder
+│       ├── posts/                        # Posts folder for author 2
+│       └── DMs/                          # DMs folder for author 2
+│
+└── coomer/                               # Coomer platform folder
+    ├── author1/                          # Author 1 folder
+    │   ├── posts/                        # Posts folder for author 1
+    │   └── DMs/                          # DMs folder for author 1 (if applicable)
+    └── author2/                          # Author 2 folder
+        ├── posts/                        # Posts folder for author 2
+        └── DMs/                          # DMs folder for author 2 (if applicable)
+
+
+![Files](img/arquivo.png)
+
+## Configuration
+
+The configuration page allows you to customize the program according to your needs.
+
+![Settings](img/configure.png)
+
+### Post Configuration
+
+In the post configuration mode, the user can set several options, including:
+
+- **Download Attachments:** Choose whether or not to download attachments.
+- **Download Videos:** Choose whether to download videos when available.
+- **Save Information:** Save information in a ".txt" file, such as title, post date, import date, and content.
+- **Save Comments:** Save post comments in the ".txt" file. To save comments, the save information option must be enabled.
+
+![Settings](img/postconfig.png)
+
+### Profile Configuration
+
+In profile configuration mode, the user can set what they want to download from the posts, similar to the post configuration options. The difference is that the user can filter by posts that have or do not have images, choosing one or the other, or both versions.
+
+![Settings](img/configprofile.png)
+
+For more details, refer to the [documentation](https://github.com/e43b/Kemono-and-Coomer-Downloader/blob/main/codeen/doc.md).
+
+## Contributions
+
+This project is open source, and you are encouraged to contribute improvements and new features. Feel free to send suggestions, report issues, or submit pull requests through the [official GitHub repository](https://github.com/e43b/Kemono-and-Coomer-Downloader/) or through our [Discord](https://discord.gg/TaPhfXawcE).
+
+## Author
+
+Developed and maintained by [E43b](https://github.com/e43b), the Kemono and Coomer Downloader aims to simplify the process of downloading posts from the Kemono and Coomer websites, providing a more accessible and organized experience.
+
+## Support
+
+If you encounter problems, find bugs, or have any questions, visit our [Discord](https://discord.gg/TaPhfXawcE) for help and support.
+
+## Links
+
+- **Project Repository:** [https://github.com/e43b/Kemono-and-Coomer-Downloader/](https://github.com/e43b/Kemono-and-Coomer-Downloader/)
+- **Kemono Site:** [https://kemono.su/](https://kemono.su/)
+- **Coomer Site:** [https://coomer.su/](https://coomer.su/)
+
+
+### Support the Project
+
+If you find this tool useful and would like to support its continued development, consider making a donation. Your contribution helps keep the project active and develop new features.
+
+#### Make a donation by accessing [this link](https://oxapay.com/donate/40874860).
+
+---
+
+We hope this tool is useful to you!
+            `;
+            document.getElementById('content').innerHTML = marked.parse(markdownContent);
+        });
+    </script>
+</body>
+</html>

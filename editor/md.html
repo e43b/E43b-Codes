@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+        }
+
+        .column {
+            width: 33%;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #editor {
+            height: calc(100vh - 140px); /* Ajusta a altura do editor */
+        }
+
+        #preview, #corrections {
+            height: calc(100vh - 140px); /* Ajusta a altura do preview e correções */
+            border-left: 1px solid #ddd;
+        }
+
+        textarea {
+            flex: 1;
+            box-sizing: border-box;
+            font-family: monospace;
+            border: 1px solid #ddd;
+            padding: 10px;
+            resize: none;
+        }
+
+        .markdown-body {
+            flex: 1;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #ddd;
+            overflow-y: auto;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 0;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0d70e3;
+        }
+
+        footer {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Markdown Editor</h1>
+    </header>
+
+    <main>
+        <div id="editor" class="column">
+            <textarea id="markdown" placeholder="Escreva seu markdown aqui..."></textarea>
+            <button id="copy-editor-button">Copiar Editor</button>
+        </div>
+        <div id="preview" class="column">
+            <div id="preview-content" class="markdown-body"></div>
+            <button id="copy-preview-button">Copiar Preview</button>
+        </div>
+        <div id="corrections" class="column">
+            <pre id="corrections-pre" class="markdown-body"></pre>
+            <button id="copy-corrections-button">Copiar Correções</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>Criado por <a href="https://github.com/e43b" target="_blank">E43b</a></p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const textarea = document.getElementById('markdown');
+            const previewContent = document.getElementById('preview-content');
+            const correctionsPre = document.getElementById('corrections-pre');
+            const copyEditorButton = document.getElementById('copy-editor-button');
+            const copyPreviewButton = document.getElementById('copy-preview-button');
+            const copyCorrectionsButton = document.getElementById('copy-corrections-button');
+
+            textarea.addEventListener('input', function() {
+                // Replace single backticks (`) with escaped backticks (\`)
+                let markdownText = textarea.value.replace(/`/g, '\\`');
+
+                // Convert Markdown to HTML and update preview
+                const html = marked.parse(markdownText);
+                previewContent.innerHTML = html;
+
+                // Preserve leading spaces and new lines in corrections
+                markdownText = textarea.value.replace(/`/g, '\\`');
+
+                // Update corrections area with the corrected text inside <pre>
+                correctionsPre.textContent = markdownText;
+            });
+
+            function copyToClipboard(element) {
+                const range = document.createRange();
+                range.selectNodeContents(element);
+                const selection = window.getSelection();
+                selection.removeAllRanges();
+                selection.addRange(range);
+                document.execCommand('copy');
+            }
+
+            copyEditorButton.addEventListener('click', function() {
+                textarea.select();
+                document.execCommand('copy');
+            });
+
+            copyPreviewButton.addEventListener('click', function() {
+                copyToClipboard(previewContent);
+            });
+
+            copyCorrectionsButton.addEventListener('click', function() {
+                copyToClipboard(correctionsPre);
+            });
+        });
+    </script>
+</body>
+</html>

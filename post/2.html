@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E43b Codes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a i {
+            margin-right: 5px;
+        }
+
+        .language-selector {
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 0;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            align-items: center;
+        }
+
+        #content {
+            width: 100%;
+            max-width: 90%;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-y: auto;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            nav ul li a span {
+                display: none;
+            }
+
+            nav ul li a i {
+                margin-right: 0;
+            }
+        }
+        h1 a {
+            text-decoration: none; /* Remove a decoração do link */
+            color: white;          /* Define a cor do texto como branca */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="index.html">E43b Codes</a></h1>
+            <ul>
+                <li><a href="https://github.com/e43b" target="_blank"><i class="fab fa-github"></i> <span>GitHub</span></a></li>
+                <li><a href="https://discord.gg/bEyHhmbRVw" target="_blank"><i class="fab fa-discord"></i> <span>Discord</span></a></li>
+                <li><a href="https://oxapay.com/donate/40874860" target="_blank"><i class="fas fa-donate"></i> <span>Doações</span></a></li>
+                <li><a href="/repositorios/index.html"><i class="fab fa-github-alt"></i> <span>Repositórios</span></a></li>
+                <li><a href="/blog/index.html"><i class="fas fa-pen-nib"></i> <span>Blog</span></a></li>
+                <li class="dropdown">
+                    <a href="#" class="language-selector"><i class="fas fa-globe"></i> <span>Language</span></a>
+                    <div class="dropdown-content">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="pt">Português</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="content" class="markdown-body">
+            <!-- O conteúdo em markdown será renderizado aqui -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Criado por <a href="https://github.com/e43b" target="_blank">E43b</a></p>
+    </footer>
+
+    <script>
+        const content = {
+            en: `
+# Introduction to Web Scraping with Python
+
+Web scraping is a technique used to extract information from web pages in an automated manner. With Python, it's possible to create scripts that navigate through pages, find relevant data, and extract it for use in analysis, research, or any other application.
+
+## How to Perform Web Scraping in Python
+
+### Key Libraries
+
+To perform web scraping in Python, we mainly use two powerful libraries:
+
+1. **Requests**: For making HTTP requests to web pages.
+2. **Beautiful Soup**: For parsing the HTML of pages and extracting desired data in a structured way.
+
+### Simple Example: Extracting News Headlines
+
+Let's create a simple example that extracts headlines from a fictional news website:
+
+\`\`\`python
+import requests
+from bs4 import BeautifulSoup
+
+# URL of the fictional news site
+url = 'http://example.com/news'
+
+# Making the HTTP request
+response = requests.get(url)
+
+# Check if the request was successful
+if response.status_code == 200:
+    # Parse the HTML content
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    # Find all news title elements
+    titles = soup.find_all('h2', class_='news-title')
+
+    # Print the found news titles
+    for title in titles:
+        print(title.text)
+else:
+    print('Failed to access the page:', response.status_code)
+\`\`\`
+
+In this example:
+- **requests.get(url)** makes a GET request to the specified URL.
+- **BeautifulSoup(response.text, 'html.parser')** parses the returned HTML so that we can manipulate it easily.
+- **soup.find_all('h2', class_='news-title')** finds all \`<h2>\` elements with the CSS class 'news-title' that contain the news headlines.
+
+### Important Considerations
+
+- **Respect terms of service**: Some websites may prohibit or limit web scraping through their policies. Always check the terms of use before scraping.
+- **Robustness and maintenance**: Websites can change their HTML structure, which can break your scraping scripts. It's important to monitor and adjust your code regularly.
+
+With these basic fundamentals, you can start exploring and using web scraping in Python for various practical applications.
+            `,
+            pt: `
+# Introdução ao Web Scraping com Python
+
+O web scraping é uma técnica utilizada para extrair informações de páginas da web de forma automatizada. Com Python, é possível criar scripts que navegam em páginas, encontram dados relevantes e os extraem para uso em análises, pesquisa ou qualquer outra aplicação.
+
+## Como fazer Web Scraping em Python
+
+### Bibliotecas Principais
+
+Para realizar web scraping em Python, utilizamos principalmente duas bibliotecas poderosas:
+
+1. **Requests**: Para fazer requisições HTTP às páginas web.
+2. **Beautiful Soup**: Para analisar o HTML das páginas e extrair os dados desejados de forma estruturada.
+
+### Exemplo Simples: Extrair Títulos de Notícias
+
+Vamos criar um exemplo simples que extrai os títulos das notícias de um site de notícias fictício:
+
+\`\`\`python
+import requests
+from bs4 import BeautifulSoup
+
+# URL do site de notícias fictício
+url = 'http://example.com/news'
+
+# Fazendo a requisição HTTP
+response = requests.get(url)
+
+# Verifica se a requisição foi bem-sucedida
+if response.status_code == 200:
+    # Parseia o conteúdo HTML
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    # Encontra todos os elementos de título das notícias
+    titles = soup.find_all('h2', class_='news-title')
+
+    # Imprime os títulos das notícias encontradas
+    for title in titles:
+        print(title.text)
+else:
+    print('Falha ao acessar a página:', response.status_code)
+\`\`\`
+
+Neste exemplo:
+- **requests.get(url)** faz uma requisição GET para a URL especificada.
+- **BeautifulSoup(response.text, 'html.parser')** analisa o HTML retornado para que possamos manipulá-lo facilmente.
+- **soup.find_all('h2', class_='news-title')** encontra todos os elementos \`<h2>\` com a classe CSS 'news-title' que contêm os títulos das notícias.
+
+### Considerações Importantes
+
+- **Respeite os termos de serviço**: Alguns sites podem proibir ou limitar web scraping através de suas políticas. Verifique sempre os termos de uso antes de realizar scraping.
+- **Robustez e manutenção**: Websites podem mudar sua estrutura HTML, o que pode quebrar seus scripts de scraping. É importante monitorar e ajustar seu código regularmente.
+
+Com esses fundamentos básicos, você pode começar a explorar e utilizar web scraping em Python para diversas aplicações práticas.
+            `
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            function renderContent(language) {
+                document.getElementById('content').innerHTML = marked.parse(content[language]);
+            }
+
+            renderContent('en'); // Default language is English
+
+            document.querySelectorAll('.dropdown-content a').forEach(item => {
+                item.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const selectedLang = this.getAttribute('data-lang');
+                    renderContent(selectedLang);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+[
+    {
+        "title": "Projeto A",
+        "description": "Este é o primeiro projeto fictício.",
+        "githubUrl": "https://github.com/e43b/projeto-a",
+        "siteUrl": "https://example.com/projeto-a",
+        "createdAt": "2023-01-15",
+        "coverUrl": "https://repository-images.githubusercontent.com/816718355/2f5209f2-0287-4044-bad3-b7cd679fd0a2",
+        "encerrado": false
+    },
+    {
+        "title": "Projeto B",
+        "description": "Este é o segundo projeto fictício.",
+        "githubUrl": "https://github.com/e43b/projeto-b",
+        "siteUrl": "https://example.com/projeto-b",
+        "createdAt": "2023-02-20",
+        "coverUrl": "",
+        "encerrado": true
+    },
+    {
+        "title": "Projeto C",
+        "description": "Este é o terceiro projeto fictício.",
+        "githubUrl": "https://github.com/e43b/projeto-c",
+        "siteUrl": "https://example.com/projeto-c",
+        "createdAt": "2023-03-10",
+        "coverUrl": "https://example.com/images/projeto-c-cover.jpg",
+        "encerrado": false
+    },
+    {
+        "title": "Projeto B",
+        "description": "Este é o segundo projeto fictício.",
+        "githubUrl": "https://github.com/e43b/projeto-b",
+        "siteUrl": "https://example.com/projeto-b",
+        "createdAt": "2023-02-20",
+        "coverUrl": "",
+        "encerrado": true
+    },
+    {
+        "title": "Projeto C",
+        "description": "Este é o terceiro projeto fictício.",
+        "githubUrl": "https://github.com/e43b/projeto-c",
+        "siteUrl": "https://example.com/projeto-c",
+        "createdAt": "2023-03-10",
+        "coverUrl": "https://example.com/images/projeto-c-cover.jpg",
+        "encerrado": false
+    },
+    {
+        "title": "Projeto B",
+        "description": "Este é o segundo projeto fictício.",
+        "githubUrl": "https://github.com/e43b/projeto-b",
+        "siteUrl": "https://example.com/projeto-b",
+        "createdAt": "2023-02-20",
+        "coverUrl": "",
+        "encerrado": true
+    },
+    {
+        "title": "Projeto C",
+        "description": "Este é o terceiro projeto fictício.",
+        "githubUrl": "https://github.com/e43b/projeto-c",
+        "siteUrl": "https://example.com/projeto-c",
+        "createdAt": "2023-03-10",
+        "coverUrl": "https://example.com/images/projeto-c-cover.jpg",
+        "encerrado": false
+    }
+]

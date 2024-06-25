@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E43b Codes</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a i {
+            margin-right: 5px;
+        }
+
+        .language-selector {
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            right: 0;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #content {
+            text-align: left;
+            display: inline-block;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            nav ul li a span {
+                display: none;
+            }
+
+            nav ul li a i {
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>E43b Codes</h1>
+            <ul>
+                <li><a href="https://github.com/e43b" target="_blank"><i class="fab fa-github"></i> <span>GitHub</span></a></li>
+                <li><a href="https://discord.gg/bEyHhmbRVw" target="_blank"><i class="fab fa-discord"></i> <span>Discord</span></a></li>
+                <li><a href="https://oxapay.com/donate/40874860" target="_blank"><i class="fas fa-donate"></i> <span>Doações</span></a></li>
+                <li><a href="#repositorios" target="_blank"><i class="fab fa-github-alt"></i> <span>Repositórios</span></a></li>
+                <li><a href="#blog" target="_blank"><i class="fas fa-pen-nib"></i> <span>Blog</span></a></li>
+                <li class="dropdown">
+                    <a href="#" class="language-selector"><i class="fas fa-globe"></i> <span>Language</span></a>
+                    <div class="dropdown-content">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="pt">Português</a>
+                        <a href="#" data-lang="es">Español</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="content">
+            <!-- O conteúdo em markdown será renderizado aqui -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Criado por <a href="https://github.com/e43b" target="_blank">E43b</a></p>
+    </footer>
+
+    <script>
+        const content = {
+            en: `
+# ChatGPT vs Gemini
+
+Recently, I watched a video that left me quite impressed with the proposal it raises about artificial intelligence and its seemingly infinite capabilities. The video in question is this:
+[![Video Title](https://img.youtube.com/vi/zPEIWWswsXE/0.jpg)](https://www.youtube.com/watch?v=zPEIWWswsXE)
+
+[I put ChatGPT to play CHESS against GEMINI](https://www.youtube.com/watch?v=zPEIWWswsXE). In it, two AI models, ChatGPT and Gemini, are pitted against each other in several chess matches. The results revealed a significant performance difference, with Gemini losing 17 games and winning only 2. This evaluation method, chosen by the video's author, illustrates the complexity of measuring the performance of different AIs, considering the diversity of parameters involved.
+
+Given the difficulty in determining superiority or inferiority between AIs solely through direct questioning, various specific tests have been developed. Examples include MMLU, GPQA, MAH, among others, each focusing on particular aspects for a more equitable evaluation among different models in specific applications.
+
+A common challenge faced by AIs is logic, as discussed in detail in this study (reference: [link to the study on AI logic](https://openreview.net/forum?id=71kocBuhNO)). Rodrigo Tadewald decided to explore these issues using chess as a scenario, given its ability to encompass various areas, especially logic, crucial in evaluating language models.
+
+In addition to physical play, chess can be played textually through PGN files, which record all players' moves, allowing the preservation of notable historical games, such as those involving figures like Einstein vs. Oppenheimer ([example of a historical game](https://www.chessgames.com/perl/chessgame?gid=1261614)) or Napoleon Bonaparte's games ([example of searching for Napoleon's games](https://www.chessgames.com/perl/ezsearch.pl?search=napoleon)).
+
+Given chess's extensive historical record, AIs have access to detailed information on opening moves. However, as the game progresses, numerous scenarios may arise, requiring logical application to identify the best moves.
+
+The mentioned project used Python and the APIs of ChatGPT and Gemini. In summary, the script sends messages to each model, providing feedback on the game's progress, with the models responding according to their programming. It is important to note that an AI may occasionally provide an inaccurate or improperly formatted response such as "SAN" (Standard Algebraic Notation), and to address this, the project incorporates a "judge" that verifies and corrects such responses, as well as preventing illegal or impossible moves.
+
+The project is available in the repository [Asimov Academy's GitHub](https://github.com/asimov-academy/llm_chess_arena).
+
+Upon analyzing the games, it is clear that Gemini demonstrated inferior performance to ChatGPT in terms of chess strategy and logic, offering less coherent explanations.
+
+This project not only confirms ChatGPT's superiority over Gemini in chess and logic but also highlights the potential of AIs for various applications when properly adapted.
+
+Thank you for reading this post!
+            `,
+            pt: `
+# ChatGPT vs Gemini
+
+Recentemente, assisti a um vídeo que me deixou bastante impressionado pela proposta que levanta diversas reflexões sobre a inteligência artificial e suas capacidades aparentemente infinitas. O vídeo em questão é este:
+[![Nome do Vídeo](https://img.youtube.com/vi/zPEIWWswsXE/0.jpg)](https://www.youtube.com/watch?v=zPEIWWswsXE)
+
+[Coloquei o CHATGPT para jogar XADREZ contra o GEMINI](https://www.youtube.com/watch?v=zPEIWWswsXE). Nele, são colocados dois modelos de IA, ChatGPT e Gemini, para competir em várias partidas de xadrez. O resultado revelou uma diferença significativa de desempenho, com o Gemini perdendo 17 partidas e ganhando apenas 2. Este método de avaliação, escolhido pelo autor do vídeo, ilustra a complexidade de medir a performance de diferentes IA, considerando a diversidade de parâmetros envolvidos.
+
+Dada a dificuldade em determinar superioridade ou inferioridade entre IA apenas por perguntas diretas, foram desenvolvidos diversos testes específicos. Exemplos incluem MMLU, GPQA, MAH, entre outros, cada um focando em aspectos particulares para uma avaliação mais equitativa entre modelos distintos em aplicações específicas.
+
+Um desafio comum enfrentado pelas IAs é a lógica, conforme discutido em detalhes neste estudo (referência: [link para o estudo sobre lógica em IA](https://openreview.net/forum?id=71kocBuhNO)). Rodrigo Tadewald decidiu explorar essas questões usando o xadrez como cenário, dada sua capacidade de abranger diversas áreas, especialmente a lógica, fundamental na avaliação de modelos de linguagem.
+
+Além de ser jogado fisicamente, o xadrez pode ser jogado por texto através de arquivos PGN, que registram todos os movimentos dos jogadores, permitindo a preservação de partidas históricas notáveis, como aquelas envolvendo figuras como Einstein vs. Oppenheimer ([exemplo de partida histórica](https://www.chessgames.com/perl/chessgame?gid=1261614)) ou partidas de Napoleão Bonaparte ([exemplo de busca por partidas de Napoleão](https://www.chessgames.com/perl/ezsearch.pl?search=napoleon)).
+
+Dado o vasto registro histórico do xadrez, as IAs possuem acesso a informações detalhadas sobre movimentos iniciais. No entanto, à medida que o jogo avança, muitos cenários podem surgir, exigindo uma aplicação lógica para identificar as melhores jogadas.
+
+O projeto mencionado utilizou Python e as APIs do ChatGPT e Gemini. Em resumo, o script envia mensagens para cada modelo, fornecendo feedback sobre o andamento da partida, com os modelos respondendo conforme sua programação. É importante notar que uma IA pode ocasionalmente fornecer uma resposta imprecisa ou fora do formato padrão como o "SAN" (Sistema de Álgebra de Notação), e para corrigir isso, o projeto incorpora um "juiz" que verifica e corrige tais respostas, além de prevenir jogadas ilegais ou impossíveis.
+
+O projeto está disponível no repositório [GitHub da Asimov Academy](https://github.com/asimov-academy/llm_chess_arena).
+
+Ao analisar as partidas, observa-se claramente que o Gemini demonstrou um desempenho inferior ao ChatGPT em termos de estratégia de xadrez e lógica, oferecendo explicações menos coesas.
+
+Esse projeto não apenas confirma a superioridade do ChatGPT sobre o Gemini em xadrez e lógica, mas também destaca o potencial das IAs para diversas aplicações, quando adaptadas adequadamente.
+
+Obrigado por ler este Post!
+            `,
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            function renderContent(language) {
+                document.getElementById('content').innerHTML = marked.parse(content[language]);
+            }
+
+            renderContent('en'); // Default language is English
+
+            document.querySelectorAll('.dropdown-content a').forEach(item => {
+                item.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const selectedLang = this.getAttribute('data-lang');
+                    renderContent(selectedLang);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
