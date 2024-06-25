@@ -2,7 +2,7 @@
     {
         "title": "ChatGPT vs Gemini",
         "description": "",
-        "Url": "/post/1.html",
+        "Url": "/E43b-Codes/post/1.html",
         "createdAt": "2024-06-25",
         "coverUrl": "https://img.youtube.com/vi/zPEIWWswsXE/0.jpg",
         "genres": ["AI", "Python", "ChatGPT", "Gemini"]
@@ -11,7 +11,7 @@
     {
         "title": "Introduction to Web Scraping with Python",
         "description": "",
-        "Url": "/post/2.html",
+        "Url": "/E43b-Codes/post/2.html",
         "createdAt": "2024-06-25",
         "coverUrl": "",
         "genres": ["Python", "Scraping"]
