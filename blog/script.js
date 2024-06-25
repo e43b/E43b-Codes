@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             displayRepositories(repositories);
         })
         .catch(error => {
-            console.error('Erro ao carregar dados dos repositórios:', error);
+            console.error('Error loading repository data:', error);
         });
 
     toggleGenresButton.addEventListener('click', () => {
@@ -72,8 +72,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     <div class="repo-info">
                         <h3><a href="${repo.Url}" target="_blank">${repo.title}</a></h3>
                         <p>${repo.description}</p>
-                        <p><strong>Data de Criação:</strong> ${repo.createdAt}</p>
-                        <p><strong>Gêneros:</strong> ${genresHTML}</p>
+                        <p><strong>Creation Date:</strong> ${repo.createdAt}</p>
+                        <p><strong>Topics:</strong> ${genresHTML}</p>
                     </div>
                 </div>
             `;
